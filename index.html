@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sujitha Shanmugam | Portfolio</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ================= ROOT VARIABLES ================= */
+:root {
+    --bg: #ffffff;
+    --text: #1f2937;
+    --primary: #16a34a;
+    --secondary: #065f46;
+    --section-bg: #f0fdf4;
+    --card-bg: #ffffff;
+    --border: #bbf7d0;
+}
+
+/* Dark Theme */
+body.dark {
+    --bg: #0f172a;
+    --text: #e5e7eb;
+    --primary: #22c55e;
+    --secondary: #16a34a;
+    --section-bg: #020617;
+    --card-bg: #020617;
+    --border: #14532d;
+}
+
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease,
+                transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: var(--secondary);
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #ecfdf5;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: #6ee7b7;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.toggle {
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* ================= HOME ================= */
+.home {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    background: linear-gradient(to right, var(--section-bg), var(--bg));
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-content {
+    animation: fadeSlide 1s ease forwards;
+}
+
+.home-content h1 {
+    font-size: 48px;
+}
+
+.home-content span {
+    color: var(--primary);
+}
+
+.home-content h3 {
+    margin: 15px 0;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+.home-content p {
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(34,197,94,0.4);
+}
+
+/* ================= SECTION ================= */
+section {
+    padding: 80px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: var(--primary);
+}
+
+/* ================= ABOUT ================= */
+.about {
+    background-color: var(--section-bg);
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* ================= SKILLS ================= */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-box {
+    background-color: var(--card-bg);
+    padding: 15px 30px;
+    border-radius: 6px;
+    color: var(--primary);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.skill-box:hover {
+    transform: scale(1.08);
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* ================= PROFILES ================= */
+.profiles {
+    background-color: var(--section-bg);
+    text-align: center;
+}
+
+.profiles-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.profile-icon {
+    width: 130px;
+    height: 130px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.profile-icon i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.profile-icon:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+}
+
+.profile-icon:hover i {
+    color: #fff;
+}
+
+/* ================= PROJECTS ================= */
+.project-card {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    background-color: var(--section-bg);
+    text-align: center;
+}
+
+.contact p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+/* ================= FEEDBACK ================= */
+.feedback {
+    text-align: center;
+}
+
+.feedback form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.feedback input,
+.feedback textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.feedback input:focus,
+.feedback textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.3);
+}
+
+.feedback button {
+    padding: 12px 30px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.feedback button:hover {
+    transform: translateY(-3px);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary);
+    color: #ecfdf5;
+}
+
+footer:hover {
+    background-color: var(--primary);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .home {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2 class="logo">Sujitha Shanmugam</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#profiles">Profiles</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li class="toggle" onclick="toggleTheme()">
+            <i class="fa-solid fa-moon"></i>
+        </li>
+    </ul>
+</nav>
+
+<section id="home" class="home">
+    <div class="home-content">
+        <h1>Hi, I'm <span>Sujitha Shanmugam</span></h1>
+        <h3>Aspiring Software Engineer</h3>
+        <p>
+            Enthusiastic engineering student passionate about Java,
+            Data Structures, and continuous learning through problem solving.
+        </p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        Motivated engineering student with strong problem-solving skills
+        and hands-on experience in Java and Data Structures.
+    </p>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+        <div class="skill-box">Java</div>
+        <div class="skill-box">Python</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">DSA</div>
+        <div class="skill-box">SQL</div>
+        <div class="skill-box">C</div>
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">Git & GitHub</div>
+    </div>
+</section>
+
+<section id="profiles" class="profiles">
+    <h2 class="section-title">My Profiles</h2>
+    <div class="profiles-container">
+        <a href="https://www.linkedin.com/in/sujitha-shanmugam-52175032b/" target="_blank" class="profile-icon">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://leetcode.com/u/sujitha__6/" target="_blank" class="profile-icon">
+            <i class="fa-solid fa-code"></i>
+            <span>LeetCode</span>
+        </a>
+        <a href="https://www.codechef.com/users/sujitha_3437" target="_blank" class="profile-icon">
+            <i class="fa-solid fa-utensils"></i>
+            <span>CodeChef</span>
+        </a>
+        <a href="https://www.geeksforgeeks.org/profile/sujithashan56bu" target="_blank" class="profile-icon">
+            <i class="fa-solid fa-book"></i>
+            <span>GFG</span>
+        </a>
+        <a href="https://github.com/suji2826" target="_blank" class="profile-icon">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+        </a>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-card">
+        <h3>Campus Navigation System</h3>
+        <p>Smart navigation system to locate places inside a college campus.</p>
+    </div>
+    <div class="project-card">
+        <h3>Flappy Bird Game</h3>
+        <p>Game with collision detection, scoring, and smooth animations.</p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>📞 +91 8438426286</p>
+    <p>📧 sujithashanmugam3437@gmail.com</p>
+</section>
+
+<section id="feedback" class="feedback">
+    <h2 class="section-title">Feedback</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Feedback" required></textarea>
+        <button type="submit">Submit Feedback</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Sujitha Shanmugam | All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
