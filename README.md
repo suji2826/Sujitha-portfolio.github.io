@@ -4,7 +4,8 @@ A personal portfolio website showcasing my skills, projects, and coding profiles
 
 ## 🔗 Live Demo
 
-> Open `index.html` in any browser to view the portfolio locally.
+>https://suji2826.github.io/my-portfolio.github.io/
+
 
 ---
 
