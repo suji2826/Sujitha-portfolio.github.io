@@ -4,7 +4,7 @@ A personal portfolio website showcasing my skills, projects, and coding profiles
 
 ## 🔗 Live Demo
 
->https://suji2826.github.io/my-portfolio.github.io/
+>https://suji2826.github.io/Sujitha-portfolio.github.io/
 
 
 ---
